@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reservily App Privacy Policy" />
+    <title>Reservily - Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f7fa;
+        transition: all 0.3s ease;
+      }
+      body[dir="rtl"] {
+        font-family: 'Tajawal', sans-serif;
+      }
+      .fade {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .fade.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-600">Reservily</h1>
+
+        <!-- Language Selector -->
+        <select
+          id="languageSelect"
+          class="border border-gray-300 rounded-md text-sm px-3 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main
+      id="content"
+      class="max-w-4xl mx-auto bg-white mt-10 rounded-2xl shadow-md p-8 fade show"
+    ></main>
+
+    <script>
+      const translations = {
+        en: {
+          updated: "Last updated: October 16, 2025",
+          title: "Privacy Policy",
+          introTitle: "Introduction",
+          intro:
+            "Welcome to Reservily. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website or use our app and tell you about your privacy rights and how the law protects you.",
+          dataTitle: "Data We Collect",
+          data:
+            "We may collect, use, store and transfer different kinds of personal data about you such as personal, transaction, and technical data including your name, email, payment information, and device details.",
+          useTitle: "How We Use Your Data",
+          use:
+            "We use your data to perform our contract with you, to comply with legal obligations, and for our legitimate interests where your rights do not override those interests.",
+          securityTitle: "Data Security",
+          security:
+            "We have put in place appropriate security measures to prevent unauthorized access, alteration, or disclosure of your personal data.",
+          rightsTitle: "Your Legal Rights",
+          rights:
+            "You have the right to access, correct, delete, restrict processing, or withdraw consent regarding your personal data.",
+          contactTitle: "Contact Us",
+          contact:
+            "If you have any questions about this Privacy Policy, please contact us at:",
+          email: "Email: reservily1nn0vate@gmail.com",
+          phone: "Phone: +222 32 88 33 88",
+          address: "Address: Nouakchott, Mauritania",
+          footer: "© 2025 Reservily. All rights reserved."
+        },
+
+        fr: {
+          updated: "Dernière mise à jour : 16 Octobre 2025",
+          title: "Politique de confidentialité",
+          introTitle: "Introduction",
+          intro:
+            "Bienvenue sur Reservily. Nous respectons votre vie privée et nous engageons à protéger vos données personnelles. Cette politique vous informe sur la façon dont nous collectons et traitons vos informations.",
+          dataTitle: "Données que nous collectons",
+          data:
+            "Nous pouvons collecter, utiliser, stocker et transférer différents types de données personnelles telles que vos informations d'identité, de transaction et techniques.",
+          useTitle: "Comment nous utilisons vos données",
+          use:
+            "Nous utilisons vos données pour exécuter notre contrat avec vous, respecter nos obligations légales et pour nos intérêts légitimes lorsque vos droits ne les supplantent pas.",
+          securityTitle: "Sécurité des données",
+          security:
+            "Nous mettons en œuvre des mesures de sécurité appropriées pour éviter tout accès non autorisé, altération ou divulgation de vos données personnelles.",
+          rightsTitle: "Vos droits légaux",
+          rights:
+            "Vous avez le droit d'accéder, de corriger, de supprimer ou de limiter le traitement de vos données personnelles, ou de retirer votre consentement à tout moment.",
+          contactTitle: "Contactez-nous",
+          contact:
+            "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter :",
+          email: "E-mail : reservily1nn0vate@gmail.com",
+          phone: "Téléphone : +222 32 88 33 88",
+          address: "Adresse : Nouakchott , Mauritania",
+          footer: "© 2025 Reservily. Tous droits réservés."
+        },
+
+        ar: {
+          updated: "آخر تحديث: 16 أكتوبر 2025",
+          title: "سياسة الخصوصية",
+          introTitle: "المقدمة",
+          intro:
+            "مرحبًا بكم في Reservily. نحن نحترم خصوصيتكم وملتزمون بحماية بياناتكم الشخصية. توضح هذه السياسة كيفية جمع بياناتكم واستخدامها وحقوقكم المتعلقة بها.",
+          dataTitle: "البيانات التي نجمعها",
+          data:
+            "قد نقوم بجمع واستخدام وتخزين ونقل أنواع مختلفة من البيانات الشخصية مثل البيانات الشخصية والمعاملات والفنية، بما في ذلك الاسم والبريد الإلكتروني ومعلومات الدفع.",
+          useTitle: "كيف نستخدم بياناتك",
+          use:
+            "نستخدم بياناتك لتنفيذ العقد معك، والامتثال للالتزامات القانونية، ولأغراضنا المشروعة عندما لا تتعارض مع حقوقك.",
+          securityTitle: "أمان البيانات",
+          security:
+            "لقد وضعنا تدابير أمنية مناسبة لمنع الوصول غير المصرح به أو التعديل أو الكشف عن بياناتك الشخصية.",
+          rightsTitle: "حقوقك القانونية",
+          rights:
+            "لديك الحق في الوصول إلى بياناتك أو تصحيحها أو حذفها أو تقييد معالجتها أو سحب موافقتك في أي وقت.",
+          contactTitle: "اتصل بنا",
+          contact:
+            "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، فيرجى التواصل معنا:",
+          email: "البريد الإلكتروني: reservily1nn0vate@gmail.com",
+          phone: "الهاتف: 222 32 88 33 88 ",
+          address: "العنوان: انواكشوط ، موريتانيا",
+          footer: "© 2025 Reservily. جميع الحقوق محفوظة."
+        }
+      };
+
+      const content = document.getElementById("content");
+      const langSelect = document.getElementById("languageSelect");
+
+      function render(lang) {
+        const t = translations[lang];
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        content.classList.remove("show");
+        setTimeout(() => {
+          content.innerHTML = `
+            <h2 class="text-3xl font-bold text-indigo-600 mb-2">${t.title}</h2>
+            <p class="text-gray-500 text-sm mb-8">${t.updated}</p>
+
+            <section class="space-y-8 leading-relaxed text-gray-700">
+              <div>
+                <h3 class="text-xl font-semibold mb-2">${t.introTitle}</h3>
+                <p>${t.intro}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold mb-2">${t.dataTitle}</h3>
+                <p>${t.data}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold mb-2">${t.useTitle}</h3>
+                <p>${t.use}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold mb-2">${t.securityTitle}</h3>
+                <p>${t.security}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold mb-2">${t.rightsTitle}</h3>
+                <p>${t.rights}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold mb-2">${t.contactTitle}</h3>
+                <p>${t.contact}</p>
+                <ul class="mt-2 space-y-1">
+                  <li>${t.email}</li>
+                  <li>${t.phone}</li>
+                  <li>${t.address}</li>
+                </ul>
+              </div>
+            </section>
+
+            <p class="text-sm text-gray-400 mt-10 text-center">${t.footer}</p>
+          `;
+          content.classList.add("show");
+        }, 150);
+      }
+
+      langSelect.addEventListener("change", (e) => render(e.target.value));
+      render("en");
+    </script>
+  </body>
+</html>
